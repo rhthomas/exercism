@@ -1,6 +1,6 @@
 unit module Leap;
 
 sub is-leap-year ($year) is export {
-    # `?` forces argument as Bool
-    ?(not($year % 4) and ($year % 100) or not($year % 400))
+    # Divisibility operator. Returns True if $a % $b == 0.
+    ($year %% 4) and not($year %% 100) or ($year %% 400)
 }
