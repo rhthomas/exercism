@@ -1,6 +1,5 @@
 unit module NucleotideCount;
 
-sub nucleotide-count ($_) is export {
-    die if $_ ~~ /<-[ACGT]>/;
+sub nucleotide-count ($_ where * !~~ /<-[ACGT]>/) is export {
     .comb;
 }
