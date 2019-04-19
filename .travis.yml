@@ -4,8 +4,7 @@ matrix:
   include:
     - language: perl6
       perl6: latest
-      install:
-        - rakudobrew build zef
-        - zef install --deps-only --/test .
-      before_script: cd perl6
-      script: prove6 .
+      # install:
+      #   - rakudobrew build zef
+      #   - zef install --deps-only --/test .
+      script: prove --ext=.t -r --exec=perl6 perl6
