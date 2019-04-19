@@ -1,5 +1,5 @@
 ![](https://img.shields.io/github/license/rhthomas/exercism.svg)
-![](https://img.shields.io/badge/platform-test-blue.svg)
+![](https://img.shields.io/badge/platform-perl6-blue.svg)
 ![](https://img.shields.io/github/last-commit/rhthomas/exercism.svg)
 
 # Exercism
