@@ -6,6 +6,6 @@ matrix:
       perl6: latest
       install:
         - rakudobrew build zef
-        - zef install --deps-only --/perl6 .
+        - zef install --deps-only --/test .
       before_script: cd perl6
       script: prove6 .
