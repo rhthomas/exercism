@@ -5,7 +5,6 @@ sub grains-on-square($num where 0 < * < 65) is export {
 }
 
 sub total-grains() is export {
-    gather {
-        take grains-on-square($_) for 1..64;
-    }.sum
+    # `race` executes in parallel without retaining order
+    [+] (1..64).race.map({ grains-on-square($_) })
 }
