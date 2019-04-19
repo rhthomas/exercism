@@ -1,0 +1,8 @@
+os:
+  - linux
+matrix:
+  include:
+    - language: perl6
+      perl6: latest
+      before_script: cd perl6
+      script: prove6 .
