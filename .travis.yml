@@ -4,7 +4,6 @@ matrix:
   include:
     - language: perl6
       perl6: latest
-      # install:
-      #   - rakudobrew build zef
-      #   - zef install --deps-only --/test .
+      install:
+        - zef install JSON::Fast
       script: prove --ext=.t -r --exec=perl6 perl6
