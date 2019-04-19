@@ -1,5 +1,5 @@
 unit module WordCount;
 
-sub count-words ($sentence) is export {
-    $sentence.lc.comb(/(\w+\'?\w+) | \d/).Bag;
+sub count-words ($_) is export {
+    .lc.comb(/ \w+ (\'\w+)? /).Bag;
 }
