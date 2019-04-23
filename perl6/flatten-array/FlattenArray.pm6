@@ -1,5 +1,5 @@
 unit module FlattenArray;
 
 sub flatten-array(@input) is export {
-    @input[*;*;*;*;*].grep(*.defined).Array;
+    [ gather @input>>.&{ .take if .defined } ];
 }
