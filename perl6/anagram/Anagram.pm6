@@ -7,6 +7,6 @@ sub match-anagrams (:$subject!, :@candidates!) is export {
         # Word bags match with target
         .lc.comb.Bag ~~ $target
         # and words do not equal subject
-        && .lc ne $subject.lc
+        and .lc ne $subject.lc
     });
 }
