@@ -1,10 +1,13 @@
-os:
-  - linux
-matrix:
-  include:
-    - language: perl6
-      perl6: latest
-      install:
-        - rakudobrew build-zef
-        - zef install JSON::Fast
-      script: prove --ext=.t -r --exec=perl6 perl6
+language:
+  - minimal
+
+services:
+  - docker
+
+install:
+  - docker pull jjmerelo/test-perl6
+
+script: docker run -t -v  \
+        $TRAVIS_BUILD_DIR:/test \
+        jjmerelo/test-perl6 \
+        "prove -r --exec=perl6 perl6"
