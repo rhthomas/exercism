@@ -7,4 +7,4 @@ services:
 install:
   - docker pull jjmerelo/test-perl6
 
-script: docker run -t -v $TRAVIS_BUILD_DIR:/test jjmerelo/test-perl6
+script: docker run -t --entrypoint="/bin/sh" -v $TRAVIS_BUILD_DIR:/test jjmerelo/test-perl6 -c "prove -r --exec=perl6 perl6"
