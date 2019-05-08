@@ -1,5 +1,5 @@
 ![](https://img.shields.io/github/last-commit/rhthomas/exercism.svg)
-![](https://img.shields.io/travis/rhthomas/exercism.svg)
+![https://travis-ci.org/rhthomas/exercism/](https://img.shields.io/travis/rhthomas/exercism.svg)
 
 # Exercism
 
